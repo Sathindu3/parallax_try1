@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family:  sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     background: linear-gradient(#2b1055 , #7597de);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 header{
     position: absolute;
@@ -45,7 +47,7 @@ header ul li a{
 
 }
 header ul li a:hover, header ul li a.active{
- background: #fff;
+    background: #fff;
     color: #2b1055;
 }
 section{
@@ -56,7 +58,17 @@ section{
     justify-content: center;
     align-items: center;
     display: flex;
+    overflow: hidden;
 
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
 }
 section img{
     position: absolute;
@@ -69,8 +81,8 @@ section img{
 }
 section img#moon{
     mix-blend-mode: screen;
-    height: 250px;
-    width: 250px;
+    height: 500px;
+    width: 500px;
 }
 section img#mountain{
     z-index: 10;
@@ -82,6 +94,7 @@ section img#mountain{
    white-space: nowrap;
    font-size: 7.5vw;
    z-index: 9;
+   right: -350px;
   
 }
 #btn{
@@ -104,6 +117,11 @@ section img#mountain{
 .sec h2{
     font-size:3.5em ;
     margin-bottom: 10px;
+    color: #fff;
+}
+.sec p{
+    font: size 1.2em;
+    color: #fff;
 }
 
 

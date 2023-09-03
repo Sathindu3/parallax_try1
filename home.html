@@ -18,15 +18,15 @@
         </ul>
     </header>
     <section>
-        <img src="sky_night.png" alt="" id="sky_nigth">
+        <img src="sky_night.png" alt="" id="sky_night">
         <img src="moon.png" alt="" id="moon">
         <h2 id="text">Moon Light</h2>
-        <a href="#" id="btn">Explore</a>
+        <a href="#sec" id="btn">Explore</a>
         <img src="mountain.png" alt="" id="mountain">
        
         
     </section>
-    <div class="sec">
+    <div class="sec" id="sec">
         <h2>parallax Scrolling Effect</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, animi iure debitis provident ipsam incidunt aliquam quos reiciendis mollitia praesentium neque temporibus blanditiis voluptate maxime? Maxime aliquam velit dolore obcaecati Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vitae maiores possimus rem quas beatae quod pariatur nemo obcaecati doloremque ipsa odit magnam repellat debitis quasi sit, laudantium quae ad Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatum officiis ipsum tempora natus, amet voluptates distinctio esse sint magni adipisci unde repellat placeat dolore maxime, dolor hic corrupti optio <br><br></p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, animi iure debitis provident ipsam incidunt aliquam quos reiciendis mollitia praesentium neque temporibus blanditiis voluptate maxime? Maxime aliquam velit dolore obcaecati Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vitae maiores possimus rem quas beatae quod pariatur nemo obcaecati doloremque ipsa odit magnam repellat debitis quasi sit, laudantium quae ad Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatum officiis ipsum tempora natus, amet voluptates distinctio esse sint magni adipisci unde repellat placeat dolore maxime, dolor hic corrupti optio <br><br></p>
@@ -35,6 +35,28 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, animi iure debitis provident ipsam incidunt aliquam quos reiciendis mollitia praesentium neque temporibus blanditiis voluptate maxime? Maxime aliquam velit dolore obcaecati Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vitae maiores possimus rem quas beatae quod pariatur nemo obcaecati doloremque ipsa odit magnam repellat debitis quasi sit, laudantium quae ad Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatum officiis ipsum tempora natus, amet voluptates distinctio esse sint magni adipisci unde repellat placeat dolore maxime, dolor hic corrupti optio <br><br></p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, animi iure debitis provident ipsam incidunt aliquam quos reiciendis mollitia praesentium neque temporibus blanditiis voluptate maxime? Maxime aliquam velit dolore obcaecati Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vitae maiores possimus rem quas beatae quod pariatur nemo obcaecati doloremque ipsa odit magnam repellat debitis quasi sit, laudantium quae ad Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptatum officiis ipsum tempora natus, amet voluptates distinctio esse sint magni adipisci unde repellat placeat dolore maxime, dolor hic corrupti optio <br><br></p>
     </div>
+
+
+    <script>
+        let sky_night = document.getElementById('sky_night');
+        let moon = document.getElementById('moon');
+        let text = document.getElementById('text');
+        let mountain = document.getElementById('mountain');
+        let btn = document.getElementById('btn');
+
+
+        window.addEventListener('scroll',function()
+        {
+            let value = window.scrollY;
+            sky_night.style.left = value  * 0.15 + 'px';
+            moon.style.top = value  * 1.25 + 'px';
+            mountain.style.top = value  * 0.0 + 'px';
+            text.style.marginRight = value  * 4 + 'px';
+            text.style.marginTop = value  * .001 + 'px';
+            btn.style.marginTop = value  * .5 + 'px';
+            
+        })
+    </script>
 
     
 
